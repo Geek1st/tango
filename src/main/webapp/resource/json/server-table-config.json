@@ -1,0 +1,59 @@
+setting = {
+	"classes":"table table-no-bordered table-striped table-hover",
+	"url": "server/listServer.do",
+	"toolbar": "#toolbar",
+	"idField": "id",
+	"uniqueId": "id",
+	"showToggle": true,
+	"showPaginationSwitch": true,
+	//显示 + 详细页
+	"detailView": true,
+	//定义详细页内容
+	"detailFormatter": function(index, row){
+		return row.description;
+	},
+	"search": true,
+	"showColumns": true,
+	"showRefresh": true,
+	"columns": [
+		{
+			"field": "_checkbox",
+			"checkbox": true,
+			"visible": false,
+			"width": "30px"
+		},
+		{
+			"field": "id",
+			"visible": false,
+			
+		},
+		{
+			"field": "type",
+			"title": "服务器类型",
+		},
+		{
+			"field": "name",
+			"title": "服务器名称"
+		},
+		{
+			"field": "address",
+			"title": "服务器地址"
+		},
+		{
+			"field": "username",
+			"title": "用户名"
+		},
+		{
+			"field": "password",
+			"title": "密码"
+		},
+		{
+			"field": "projectId",
+			"visible":false
+		},
+		{
+			"field":"projectName",
+			"title":"所属项目"
+		}
+	]
+}

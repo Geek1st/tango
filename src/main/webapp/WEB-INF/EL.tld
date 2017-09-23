@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"  
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"  
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">  
+  
+    <description>tango library</description>  
+    <display-name>JSTL functions</display-name>  
+    <tlib-version>1.0</tlib-version>  
+  
+    <short-name>dic</short-name>  
+    <uri>http://geeklib.com/functions</uri>  
+  
+    <function>  
+        <name>listProject</name>  
+        <function-class>com.geeklib.tango.el.Dictionary</function-class>  
+        <function-signature>com.geeklib.tango.entity.Project listProject()</function-signature>  
+    </function>  
+    
+    <function>
+    	<name>listServerType</name>
+    	<function-class>com.geeklib.tango.el.Dictionary</function-class>
+    	<function-signature>com.geeklib.tango.entity.ServerType listServerType()</function-signature>
+    </function>
+    
+    <function>
+    	<name>getProjectById</name>
+    	<function-class>com.geeklib.tango.el.Dictionary</function-class>
+    	<function-signature>com.geeklib.tango.entity.Project getProjectById(long)</function-signature>
+    </function>
+    
+    <function>
+    	<name>listSoftwareType</name>
+    	<function-class>com.geeklib.tango.el.Dictionary</function-class>
+    	<function-signature>com.geeklib.tango.entity.SoftwareType listSoftwareType()</function-signature>
+    </function>
+    
+    <function>
+    	<name>listSoftware</name>
+    	<function-class>com.geeklib.tango.el.Dictionary</function-class>
+    	<function-signature>com.geeklib.tango.entity.Software listSoftware(int)</function-signature>
+    </function>
+</taglib>  

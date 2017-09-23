@@ -1,0 +1,11 @@
+com.geeklib.tango.aspect
+com.geeklib.tango.controller
+com.geeklib.tango.el
+com.geeklib.tango.entity
+com.geeklib.tango.interceptor
+com.geeklib.tango.mapper
+com.geeklib.tango.mapping
+com.geeklib.tango.service
+com.geeklib.tango.service.impl
+com.geeklib.tango.util
+com.geeklib.tango.websocket
