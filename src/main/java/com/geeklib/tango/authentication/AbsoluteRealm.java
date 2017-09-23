@@ -36,7 +36,7 @@ public class AbsoluteRealm extends AuthorizingRealm{
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
 		// TODO Auto-generated method stub
-		String username = principals.getPrimaryPrincipal().toString();
+		String username = ((User)principals.getPrimaryPrincipal()).getUsername();
 		SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
 		Set<String> roleName = userMapper.getRoleNameByUserName(username);
 		authorizationInfo.addRoles(roleName);
