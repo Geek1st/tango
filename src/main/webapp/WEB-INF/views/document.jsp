@@ -77,7 +77,7 @@ a:link {
 <script type="text/javascript">
 	$(function(){
 		$(".col-md-4 .panel:eq(0)").click(function(){
-			window.location.href="../document/add.do";
+			window.location.href="${domain}/document/add.do";
 		})
 	})
 </script>
