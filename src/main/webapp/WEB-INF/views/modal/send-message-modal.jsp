@@ -18,7 +18,7 @@
 		
 		var availableTags = ["ActionScript1111111111111111111111111111111111111", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
 		 
-		$("#addressee").typeahead({source:availableTags});
+		$("#receiveUser").typeahead({source:availableTags});
 		
 		$("#btnSendInnerMessage").click(function(){
 			var json = {};
@@ -42,7 +42,7 @@
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">发送站内信 {{ user }}</h4>
+					<h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-envelope"></span> 发送站内信 {{ user }}</h4>
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
