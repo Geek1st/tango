@@ -1,9 +1,13 @@
 package com.geeklib.tango.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.geeklib.tango.entity.InternalMessage;
 import com.geeklib.tango.service.InternalMessageService;
@@ -28,5 +32,12 @@ public class InternalMessageController {
 	@RequestMapping("sendMessage")
 	public void sendMessage(InternalMessage internalMessage) {
 		internalMessageService.saveInternalMessage(internalMessage);
+	}
+	
+	@RequestMapping(value="privateMessage",method=RequestMethod.GET)
+	@ResponseBody
+	public List<InternalMessage> privateMessage() {
+		List<InternalMessage> pm = internalMessageService.listPrivateMessage(2);
+		return pm;
 	}
 }

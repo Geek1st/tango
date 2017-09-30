@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.jdbc.SQL;
 
-public interface ServerMapper {
+public interface ServerMapper extends BaseMapper<Server> {
     long countByExample(ServerExample example);
 
     int deleteByExample(ServerExample example);

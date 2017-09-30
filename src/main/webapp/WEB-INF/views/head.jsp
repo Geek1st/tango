@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -110,7 +111,9 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">个人中心</a></li>
                             <li><a href="#" data-toggle="modal" data-target="#modalSendMessage">发送站内信</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <shiro:hasRole name="administrator">
+                            	<li><a href="#">控制中心</a></li>
+                            </shiro:hasRole>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">关于</a></li>
                             <li role="separator" class="divider"></li>

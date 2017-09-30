@@ -8,18 +8,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>编辑文章</title>
-<script src="../../resource/js/template-web.js"></script>
-<script src="../../resource/js/jquery-2.1.4.js"></script>
-<script src="../../resource/js/bootstrap.min.js"></script>
-<script src="../../resource/js/global.js"></script>
-<script src="../../resource/js/bootstrap-markdown.js"></script>
-<script src="../../resource/js/to-markdown.js"></script>
-<script src="../../resource/js/marked.js"></script>
+<script src="${domain }/resource/js/template-web.js"></script>
+<script src="${domain }/resource/js/jquery-2.1.4.js"></script>
+<script src="${domain }/resource/js/bootstrap.min.js"></script>
+<script src="${domain }/resource/js/global.js"></script>
+<script src="${domain }/resource/js/bootstrap-markdown.js"></script>
+<script src="${domain }/resource/js/to-markdown.js"></script>
+<script src="${domain }/resource/js/marked.js"></script>
 <script src="http://cdn.bootcss.com/markdown.js/0.5.0/markdown.min.js"></script>
-<script src="<%=request.getContextPath() %>/resource/js/jquery.pin.js"></script>
+<script src="${domain }/resource/js/jquery.pin.js"></script>
 
-<link rel="stylesheet" href="../../resource/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../resource/css/global.css" />
+<link rel="stylesheet" href="${domain }/resource/css/bootstrap.min.css">
+<link rel="stylesheet" href="${domain }/resource/css/global.css" />
 
 <style type="text/css">
 .md-preview {
@@ -117,7 +117,7 @@ a:link {
 						<div id="document">
 							<div class="page-header">
 								<h2>
-									<a href="#">${document.title }<span class="glyphicon glyphicon-bell" aria-hidden="true" ></span> </a>
+									<a href="#">${document.title } </a>
 								</h2>
 							</div>
 							<div id="content">${document.markdownStyleContent }</div>

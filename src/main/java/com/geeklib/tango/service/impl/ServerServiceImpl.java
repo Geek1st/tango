@@ -20,7 +20,7 @@ public class ServerServiceImpl implements ServerService
 	@Override
 	public List<Server> listServer()
 	{
-		return serverMapper.selectByExample(null);
+		return serverMapper.listObjects(Server.class);
 	}
 
 	@Override

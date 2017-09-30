@@ -8,13 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 
-<script src="../resource/js/template-web.js"></script>
-<script src="../resource/js/jquery-2.1.4.js"></script>
-<script src="../resource/js/bootstrap.min.js"></script>
-<script src="../resource/js/global.js"></script>
+<script src="${domain }/resource/js/template-web.js"></script>
+<script src="${domain }/resource/js/jquery-2.1.4.js"></script>
+<script src="${domain }/resource/js/bootstrap.min.js"></script>
+<script src="${domain }/resource/js/global.js"></script>
 
-<link rel="stylesheet" href="../resource/css/bootstrap.min.css">
-<link rel="stylesheet" href="../resource/css/global.css"/>
+<link rel="stylesheet" href="${domain }/resource/css/bootstrap.min.css">
+<link rel="stylesheet" href="${domain }/resource/css/global.css"/>
 
 <style type="text/css">
 .media img{
@@ -32,7 +32,7 @@
 			$(".list-group-item").removeClass("active");
 			$(this).addClass("active");
 
-			$.post("../software/listSoftware.do",{softwareTypeId:1},function(data){
+			$.post("${domain}/software/listSoftware.do",{softwareTypeId:1},function(data){
 				
 				var data = {data:data}
 				$(".col-md-9").html(template("tempMedia",data))
@@ -48,7 +48,7 @@
 	{{each data software i}}
 		<div class="media">
 			<a href="{{software.path}}" class="pull-left" >
-				<img src="" class="media-object" alt='' />
+				<img src="${domain}/resource/image/whatsapp.png" class="media-object" alt='' />
 			</a>
 			<div class="media-body">
 				<h4 class="media-heading">{{software.name}}</h4>

@@ -1,5 +1,7 @@
 package com.geeklib.tango.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
@@ -25,4 +27,14 @@ public class InternalMessageServiceImpl implements InternalMessageService {
 		internalMessageMapper.save(internalMessage);
 	}
 
+	public List<InternalMessage> listInternalMessage(long userId){
+		return null;
+	}
+
+	@Override
+	public List<InternalMessage> listPrivateMessage(long userId) {
+		// TODO Auto-generated method stub
+		List<InternalMessage> internalMessages = internalMessageMapper.listObjects(InternalMessage.class);
+		return internalMessages;
+	}
 }
