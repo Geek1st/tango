@@ -4,9 +4,13 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-	<classPathEntry location="C:\Users\Geek1st\.m2\repository\mysql\mysql-connector-java\5.1.18\mysql-connector-java-5.1.18.jar" />
-	<context id="mbg" targetRuntime="MyBatis3">
-		<commentGenerator>
+		
+	<context id="tango" targetRuntime="MyBatis3Simple" defaultModelType="flat" >
+	
+		<property name="javaFileEncoding" value="UTF-8"/>
+		<plugin type="com.geeklib.tango.config.CustomMethodNameRule"></plugin>
+		
+		<commentGenerator type="com.geeklib.tango.config.CustomCommentGenerator">
 			<property name="suppressDate" value="false" />
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
@@ -14,19 +18,15 @@
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/tango" userId="root" password="root" />
 
 		<!-- 实体类 -->
-		<javaModelGenerator targetPackage="com.geeklib.tango.entity" targetProject="src/main/java">
-			<property name="enableSubPackages" value="true" />
-			<property name="trimStrings" value="true" />
+		<javaModelGenerator targetPackage="com.geeklib.tango.entity" targetProject="tango">
 		</javaModelGenerator>
 
-		<!-- sqlmapper -->
-		<sqlMapGenerator targetPackage="com.geeklib.tango.mapping" targetProject="src/main/java">
-			<property name="enableSubPackages" value="true" />
+		<!-- mapping xml -->
+		<sqlMapGenerator targetPackage="com.geeklib.tango.mapping" targetProject="tango">
 		</sqlMapGenerator>
 
-		<!-- dao类 -->
-		<javaClientGenerator targetPackage="com.geeklib.tango.mapper" targetProject="src/main/java" type="XMLMAPPER">
-			<property name="enableSubPackages" value="true" />
+		<!-- mapper 接口 -->
+		<javaClientGenerator targetPackage="com.geeklib.tango.mapper" targetProject="tango" type="XMLMAPPER">
 		</javaClientGenerator>
 
 		<!--<table tableName="T_FEE_AGTBILL" domainObjectName="FeeAgentBill" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/> -->
@@ -36,7 +36,11 @@
 		<table tableName="server" /> -->
 		<!-- <table tableName="SoftwareType" domainObjectName="Software" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <columnRenamingRule searchString="^D_" 
 			replaceString=""/> </table> -->
-		<table tableName="internal_message">
+	
+		
+		<table tableName="sys%" >
+			<generatedKey column="id" sqlStatement="Mysql"/>
+			<domainObjectRenamingRule searchString="^Sys"/>
 		</table>
 	</context>
 </generatorConfiguration>

@@ -28,10 +28,6 @@
 	opacity: 0.95;
 }
 
-.container-fluid {
-	display: -webkit-flex;
-	align-items:center;
-}
 
 body {
 	background-image:
@@ -43,25 +39,33 @@ body {
 	margin:0px auto ;
 	display: -webkit-box;
 }
+.row{
+	max-width:400px;
+	position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -205px;
+}
 
-.panel-body{
-	
+.container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 </style>
 <script type="text/javascript">
-	$(function() {
-		$(".container-fluid").css("height", document.body.scrollHeight);
-	})
 </script>
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="row-fluid" style="width:100%">
-			<div class="col-md-4 col-md-offset-4">
+		<div class="row">
+			<div class="">
 				<div id="formCard" class="panel panel-default">
 					<div class="panel-body">
 						<img src="${domain}/resource/image/icons/atom.svg"/>
-						<form action="${domain }/sign/login" method="POST">
+						<form action="${domain }/login" method="POST">
 							<div class="form-group">
 								<label for="username">用户名</label> 
 								<input type="email" class="form-control" id="username" placeholder="Email" name="username">

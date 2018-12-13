@@ -2,7 +2,6 @@ package com.geeklib.tango.annotation;
 
 /**
  * 
- * TODO
  * @author Geek1st
  * @version 1.0
  */

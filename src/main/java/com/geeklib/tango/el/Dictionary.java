@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.geeklib.tango.entity.Project;
-import com.geeklib.tango.entity.ServerType;
-import com.geeklib.tango.entity.Software;
-import com.geeklib.tango.entity.SoftwareType;
-import com.geeklib.tango.service.ProjectService;
-import com.geeklib.tango.service.ServerTypeService;
-import com.geeklib.tango.service.SoftwareService;
-import com.geeklib.tango.service.SoftwareTypeService;
+import com.geeklib.tango.features.entity.Project;
+import com.geeklib.tango.features.entity.ServerType;
+import com.geeklib.tango.features.entity.Software;
+import com.geeklib.tango.features.entity.SoftwareType;
+import com.geeklib.tango.features.service.ProjectService;
+import com.geeklib.tango.features.service.ServerTypeService;
+import com.geeklib.tango.features.service.SoftwareService;
+import com.geeklib.tango.features.service.SoftwareTypeService;
 
 /**
  * 

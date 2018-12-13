@@ -2,7 +2,7 @@ package com.geeklib.tango.util;
 
 import org.junit.Test;
 
-import com.geeklib.tango.entity.User;
+import com.geeklib.tango.system.entity.User;
 
 import io.jsonwebtoken.Claims;
 
@@ -13,10 +13,10 @@ public class JwtUtilTest {
 		
 		User user = new User();
 		user.setId(Long.valueOf(123));
-		user.setNickName("hunima");
+		user.setNickname("hunima");
 		user.setUsername("dashabi");
 		
-		String token = JwtUtil.createToken(user, System.currentTimeMillis());
+		String token = JwtUtil.createToken(user, 10000000);
 		
 		System.out.println(token);
 		

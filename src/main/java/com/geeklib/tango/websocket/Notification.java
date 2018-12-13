@@ -29,10 +29,8 @@ public class Notification {
 			try {
 				session.getBasicRemote().sendObject(message);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (EncodeException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -52,7 +50,6 @@ public class Notification {
 //			e.printStackTrace();
 //			
 //		} catch (EncodeException e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 	}

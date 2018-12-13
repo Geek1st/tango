@@ -25,7 +25,6 @@ public class JdbcUtil
 		}
 		catch (FileNotFoundException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try
@@ -34,7 +33,6 @@ public class JdbcUtil
 		}
 		catch (IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
