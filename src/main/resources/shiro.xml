@@ -6,7 +6,7 @@
 	<bean id="usernamePasswordRealm" class="com.geeklib.tango.system.realm.UsernamePasswordRealm" />
 
 	<bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
-		<property name="globalSessionTimeout" value="18000" />
+		<property name="globalSessionTimeout" value="600000" />
 		<property name="deleteInvalidSessions" value="true" />
 	</bean>
 	<bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager" />
@@ -32,7 +32,7 @@
 		<property name="unauthorizedUrl" value="/500.jsp" />
 		<property name="filters">
 			<map>
-				<entry key="shiroLoginFilter" value-ref="sessionTimeOutFilter"/>
+				<entry key="ajaxTimeOut" value-ref="sessionTimeOutFilter"/>
 			</map>
 		</property>
 		<property name="filterChainDefinitions">
@@ -40,7 +40,7 @@
 				/login = authc
 				/logout = logout
 				/resource/** = anon
-				/** = authc
+				/** = ajaxTimeOut
 			</value>
 		</property>
 	</bean>

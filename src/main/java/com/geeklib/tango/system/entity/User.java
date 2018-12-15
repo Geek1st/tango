@@ -2,6 +2,10 @@ package com.geeklib.tango.system.entity;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class User {
     private Long id;
 
@@ -10,6 +14,8 @@ public class User {
      *
      * @mbg.generated Sun Dec 02 23:20:50 CST 2018
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date gmtCreate;
 
     /**
@@ -17,6 +23,8 @@ public class User {
      *
      * @mbg.generated Sun Dec 02 23:20:50 CST 2018
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date gmtModify;
 
     /**

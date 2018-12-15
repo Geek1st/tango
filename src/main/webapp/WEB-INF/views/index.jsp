@@ -1,16 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="zh-cn">
-
+<html>
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Tango Project</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="${domain}/resource/css/bootstrap.min.css" rel="stylesheet">
@@ -34,6 +33,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
+    
     <script type="text/javascript">
     	
    		function mainView(url){
@@ -41,15 +41,6 @@
    				
    			})
    			
-   			$.ajaxSetup({
-   				complete: function(xhr) {
-   			        
-   			        if(401 == xhr.status){
-						window.location.href = "${domain}/";   			        	
-   			        }
-   			    }
-   			});
-
    		}
    		
     </script>
@@ -69,7 +60,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="">Tango Project</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -976,7 +967,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="${domain}/resource/js/sb-admin-2.js"></script>
-    
+    <script type="text/javascript" src="${domain}/resource/js/common.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@ public interface UserMapper {
 
 	@Insert("INSERT INTO sys_user ( gmt_create, gmt_modify, username, password, nickname, mobile_phone, email, locking )\r\n" + 
 			"VALUES\r\n" + 
-			"	( 1, NOW(), NULL, #{username}, #{password}, #{nickname}, #{mobilePhone}, #{email}, 0 );")
+			"	( NOW(), NOW(), #{username}, #{password}, #{nickname}, #{mobilePhone}, #{email}, 0 );")
 	int saveUser(User record);
 
 	@Select("SELECT * FROM sys_user WHERE id = #{id}")
